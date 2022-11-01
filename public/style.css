@@ -1,0 +1,36 @@
+.userName span {
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
+}
+
+.affiliate_fill .analysis-table .col-md-4 {
+  padding: 10px;
+  background-color: #4d7cff;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.affiliate_fill .analysis-table .col-md-4 p {
+  margin-bottom: 0 !important;
+}
+
+.affiliate_fill .analysis-table .col-md-7 {
+  padding: 10px;
+  background-color: #4d7cff;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.affiliate_fill .analysis-table .col-md-7 p {
+  margin-bottom: 0 !important;
+}
+/*# sourceMappingURL=style.css.map */
