@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,94 +9,95 @@
     <title>Online Booking System</title>
 
 
+
     <!-- Favicons -->
-    <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
+    {{-- <link href="{{asset('assets/img/favicon.png')}}" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
     <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
         <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet"> --}}
 
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg  bg-light ">
-        <div class="container">
-          <span>  <h2 style="font-size: 24px">Online Booking System</h2></span>
+
+<nav class="navbar navbar-expand-lg fixed-top sticked my-2 ">
+    <div class="container">
+      <span>  <h2 style="font-size: 24px"></h2></span>
 
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
 
-              @guest
-              <li> <button data-bs-toggle="modal" data-bs-target="#loginModal" class="nav-link text-dark  " style="border: 2px solid #eb5d1e;
-                border-radius: 25px; text-decoration:none;
-                padding: 6px 20px;   ">Order Now</button>
-                </li>
-              @endguest
+          @guest
+          <li class="mx-2"> <button data-bs-toggle="modal" data-bs-target="#loginModal" class="nav-link text-dark bg-light  " style="border: 2px solid #eb5d1e;
+            border-radius: 25px; text-decoration:none;
+            padding: 6px 20px;   ">Order Now</button>
+            </li>
+          @endguest
 
-              @auth
-              <li><a class="nav-link  text-dark " href="{{ route('order') }}" style="border: 2px solid #eb5d1e;
-                border-radius: 25px; text-decoration:none;
-                padding: 6px 20px;   "> Order Now</a></li>
-              @endauth
+          @auth
+          <li><a class="nav-link  text-dark  bg-light  " href="{{ route('order') }}" style="border: 2px solid #eb5d1e;
+            border-radius: 25px; text-decoration:none;
+            padding: 6px 20px;  "> Order Now</a></li>
+          @endauth
 
-              <li>
-                @auth
-                <div class="profile_info">
-                    <a href="{{ route('personal') }}"><img src="{{ auth()->user()->profile_photo_url }}" alt="#"></a>
+          <li>
+            @auth
+            <div class="profile_info">
+                <a href="{{ route('personal') }}"><img src="{{ auth()->user()->profile_photo_url }}" alt="#"></a>
 
-                    <div class="profile_info_iner">
-                        <p>{{ auth()->user()->email }} </p>
-                        <h5>{{ auth()->user()->name }}</h5>
-                        <div class="profile_info_details">
+                <div class="profile_info_iner">
+                    <p>{{ auth()->user()->email }} </p>
+                    <h5>{{ auth()->user()->name }}</h5>
+                    <div class="profile_info_details">
 
-                            <a class="nav-link active text-light" aria-current="page"
-                            href="{{ route('personal') }}" >Profile</a>
+                        <a class="nav-link active text-light  bg-light " aria-current="page"
+                        href="{{ route('personal') }}" >Profile</a>
 
-                        </div>
-                        <div class="profile_info_details">
+                    </div>
+                    <div class="profile_info_details">
 
-                            <a class="nav-link active" aria-current="page"
-                            href="{{ route('logout') }}" onclick="event.preventDefault();
-                               document.getElementById('logout-form').submit();">Logout</a>
+                        <a class="nav-link active" aria-current="page"
+                        href="{{ route('logout') }}" onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">Logout</a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                            style="display: none;">
-                            @csrf
-                        </form>
-                        </div>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                        style="display: none;">
+                        @csrf
+                    </form>
                     </div>
                 </div>
-                @endauth
+            </div>
+            @endauth
 
-                @guest
-                <button data-bs-toggle="modal" data-bs-target="#loginModal" class="nav-link  text-dark  " style="border: 2px solid #eb5d1e;
-                border-radius: 25px; text-decoration:none;
-                padding: 6px 20px; ">Join/Register</button>
+            @guest
+            <button data-bs-toggle="modal" data-bs-target="#loginModal" class="nav-link  text-dark  bg-light  " style="border: 2px solid #eb5d1e;
+            border-radius: 25px; text-decoration:none;
+            padding: 6px 20px; ">Join/Register</button>
 
-                @endguest
-              </li>
+            @endguest
+          </li>
 
-            </ul>
+        </ul>
 
-          </div>
-        </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 
-
-
+  @include('index')
 
 
 

@@ -29,6 +29,8 @@ use Illuminate\Support\Facades\Route;
 Route::post('first-register', [authenticationController::class, 'firstRegister'])->name('firstRegister');
 Route::post('crypto-success', [OrderController::class, 'cryptosuccess'])->name('crypto-success');
 
+Route::get('/view',[indexController::class, 'view']);
+
 
 
 

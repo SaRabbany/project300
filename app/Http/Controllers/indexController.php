@@ -15,6 +15,10 @@ class indexController extends Controller
 
 
 
+    public function view()
+    {
+        return view('index');
+    }
 
 
     public function index()
