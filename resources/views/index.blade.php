@@ -7,10 +7,10 @@
     <div class="container">
       <div class="row gy-4 d-flex justify-content-between">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
+          <h2 data-aos="fade-up">Online Booking system</h2>
           <p data-aos="fade-up" data-aos-delay="100">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
 
-          
+
 
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
 
@@ -307,7 +307,7 @@
     </section><!-- End Features Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing pt-0">
+    {{-- <section id="pricing" class="pricing pt-0">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -366,7 +366,7 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section><!-- End Pricing Section --> --}}
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">

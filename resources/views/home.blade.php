@@ -44,7 +44,7 @@
           @guest
           <li class="mx-2"> <button data-bs-toggle="modal" data-bs-target="#loginModal" class="nav-link text-dark bg-light  " style="border: 2px solid #eb5d1e;
             border-radius: 25px; text-decoration:none;
-            padding: 6px 20px;   ">Order Now</button>
+            padding: 6px 20px;   ">BOOKING </button>
             </li>
           @endguest
 
